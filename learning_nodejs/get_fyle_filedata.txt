@@ -1,0 +1,6 @@
+
+        Archivo : get_fyle.js
+        Directorio : /home/dante/Desktop/Scripts/learning_nodejs
+        Tipo de archivo : .js
+        fecha de ejecucion : 1/11/2025, 6:37:25 PM
+    

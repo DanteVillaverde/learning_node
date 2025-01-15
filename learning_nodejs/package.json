@@ -1,0 +1,18 @@
+{
+  "name": "learning_nodejs",
+  "version": "1.0.0",
+  "description": "learning nodeJS",
+  "main": "app_calculadora.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dante Villaverde",
+  "license": "ISC",
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  }
+}
