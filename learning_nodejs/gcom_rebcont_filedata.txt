@@ -1,6 +1,0 @@
-
-        Archivo : gcom_rebcont.js
-        Directorio : ./
-        Tipo de archivo : .js
-        fecha de ejecucion : 1/11/2025, 6:43:42 PM
-    

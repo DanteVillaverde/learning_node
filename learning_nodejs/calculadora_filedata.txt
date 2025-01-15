@@ -1,6 +1,0 @@
-
-        Archivo : calculadora.js
-        Directorio : /home/dante/Desktop/Scripts/learning_nodejs
-        Tipo de archivo : .js
-        fecha de ejecucion : 1/11/2025, 6:46:06 PM
-    

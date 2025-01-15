@@ -1,6 +1,0 @@
-
-        Archivo : filesystem.js
-        Directorio : /home/dante/Desktop/Scripts/learning_nodejs
-        Tipo de archivo : .js
-        fecha de ejecucion : 1/7/2025, 9:57:14 PM
-    
