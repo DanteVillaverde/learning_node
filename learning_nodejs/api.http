@@ -1,0 +1,10 @@
+GET http://localhost:36394/
+
+###
+GET http://localhost:36394/invoice
+
+###
+GET http://localhost:36394/show_invoice
+
+### SEND INVOICE JSON
+POST http://localhost:36394/post 
