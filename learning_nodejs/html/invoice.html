@@ -22,7 +22,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 100%;
-            max-width: 400px;
+            max-width: 600px;
         }
 
         h1 {
@@ -31,16 +31,22 @@
             color: #ffffff;
         }
 
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
         label {
-            display: block;
-            margin-bottom: 8px;
             font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
         }
 
         input, select, button {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            margin: 0;
             border: none;
             border-radius: 4px;
         }
@@ -55,6 +61,7 @@
             color: #ffffff;
             font-weight: bold;
             cursor: pointer;
+            grid-column: span 2;
         }
 
         button:hover {
@@ -65,35 +72,108 @@
             text-align: center;
             font-size: 0.9em;
             color: #bbbbbb;
+            grid-column: span 2;
+        }
+
+        /* 
+        * =========================================
+        *  MENU DE SECCIONES 
+        * =========================================
+        */
+        nav {
+            width: 150px;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            background-color: #70797a;
+            color: rgb(10, 4, 4);
+            position: fixed; /* Fijo al lado izquierdo */
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column; /* Apila los elementos verticalmente */
+            padding-top: 50px;
+        }
+
+        /* Lista del menú */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Elementos del menú */
+        nav ul li {
+            margin: 45px 0;
+            text-align: center;
+        }
+
+        /* Enlaces del menú */
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 0;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        /* Efecto hover */
+        nav ul li a:hover {
+            background-color: #985496;
         }
     </style>
 </head>
 <body>
     <div class="form-container">
         <h1>Registro de Facturas</h1>
-        <form>
-            <label for="invoice-number">Número de Factura:</label>
-            <input type="text" id="invoice-number" name="invoice-number" required>
 
-            <label for="date">Fecha:</label>
-            <input type="date" id="date" name="date" required>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
 
-            <label for="amount">Monto:</label>
-            <input type="number" id="amount" name="amount" step="0.01" required>
+        <form action="" method="POST">
+            <div>
+                <label for="invoice-number">Factura:</label>
+                <input type="text" id="invoice-number" name="invoice-number" required>
+            </div>
 
-            <label for="description">Descripción:</label>
-            <input type="text" id="description" name="description">
+            <div>
+                <label for="ruc">Ruc:</label>
+                <input type="text" id="ruc" name="ruc" required>
+            </div>
 
-            <label for="status">Estado:</label>
-            <select id="status" name="status">
-                <option value="paid">Pagada</option>
-                <option value="pending">Pendiente</option>
-                <option value="cancelled">Cancelada</option>
-            </select>
+            <div>
+                <label for="company">Empresa:</label>
+                <input type="text" id="company" name="company" required>
+            </div>
+
+            <div>
+                <label for="customer">Cliente:</label>
+                <input type="text" id="customer" name="customer">
+            </div>
+            
+            <div>
+                <label for="addres_customer">Direccion:</label>
+                <input type="text" id="addres_customer" name="addres_customer">
+            </div>
+
+            <div>
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div>
+                <label for="divisa">Divisa:</label>
+                <input type="text" id="divisa" name="divisa">
+            </div>
 
             <button type="submit">Registrar</button>
+            <p class="footer">Todos los campos son obligatorios salvo descripción.</p>
         </form>
-        <p class="footer">Todos los campos son obligatorios salvo descripción.</p>
     </div>
 </body>
 </html>

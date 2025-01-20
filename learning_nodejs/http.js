@@ -44,7 +44,20 @@ const server = http.createServer((request, response) => {
 
         case 'POST':
             if (request.url == '/post') {
-                
+                let body = '';
+
+                request.on('data', chunk => {
+                    body = body + chunk.toString()
+                })
+
+                request.on('end', () => {
+                    const data = JSON.parse(body)
+                    console.log('body =', body, '\ntypeof =', typeof body)
+                    console.log('data =', data, '\ntypeof =', typeof data)
+
+                    response.writeHead(201, { 'Content-Type': 'application/json; charset=utf-8' })
+                    response.end(JSON.stringify(data))
+                })
             }
             break;
     

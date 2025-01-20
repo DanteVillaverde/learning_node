@@ -1,0 +1,79 @@
+[
+    {
+      "code": "FAC001",
+      "fecha": "2025-01-08",
+      "cliente": "Juan Pérez",
+      "divisa" : "EUR",
+      "importe" : 1625.50,
+      "lines": [
+        {
+          "item": "Laptop",
+          "importe": 1500.00
+        },
+        {
+          "item": "Mouse inalámbrico",
+          "importe": 25.50
+        },
+        {
+          "item": "Teclado mecánico",
+          "importe": 100.00
+        }
+      ]
+    },
+    {
+      "code": "FAC002",
+      "fecha": "2025-01-11",
+      "cliente": "María López",
+      "divisa" : "EUR",
+      "importe" : 835.00,
+      "lines": [
+        {
+          "item": "Smartphone",
+          "importe": 800.00
+        },
+        {
+          "item": "Protector de pantalla",
+          "importe": 15.00
+        },
+        {
+          "item": "Funda de silicona",
+          "importe": 20.00
+        }
+      ]
+    },
+    {
+      "code": "FAC003",
+      "fecha": "2025-01-14",
+      "cliente": "Carlos Ramírez",
+      "divisa" : "PEN",
+      "importe" : 210.00,
+      "lines": [
+        {
+          "item": "Monitor",
+          "importe": 200.00
+        },
+        {
+          "item": "Cable HDMI",
+          "importe": 10.00
+        }
+      ]
+    },
+    {
+        "code": "FAC004",
+        "fecha": "2025-01-18",
+        "cliente": "Gomah Degesu",
+        "divisa" : "USD",
+        "importe" : 320.00,
+        "lines": [
+          {
+            "item": "Teclado",
+            "importe": 270.00
+          },
+          {
+            "item": "Mouse",
+            "importe": 50.00
+          }
+        ]
+    }
+]
+  

@@ -8,3 +8,23 @@ GET http://localhost:36394/show_invoice
 
 ### SEND INVOICE JSON
 POST http://localhost:36394/post 
+Content-Type: application/json
+
+{
+    "factura" : "FC-123456",
+    "fecha" : "10-02-2025",
+    "divisa" : "EURO",
+    "empresa" : "DANTE S.A.C",
+    "importe_bruto" : 100,
+    "iva" : 18,
+    "importe_neto" : 118,
+    "lineas" : [
+        {
+            "articulo" : "S012345",
+            "cantidad" : 20,
+            "unidad_compra" : "UNIDADES",
+            "precio ": 5,
+            "importe" : 100
+        }
+    ]
+}

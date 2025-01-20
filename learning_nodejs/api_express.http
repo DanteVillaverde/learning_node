@@ -1,0 +1,16 @@
+### REGISTER INVOICES
+GET http://localhost:36394/invoice
+
+### CREATE NEW INVOICE
+POST http://localhost:36394/invoice
+Content-Type : application/json
+
+{
+  "invoice-number ": "fc123",
+  "ruc ": "sad",
+  "company ": "dante",
+  "customer ": "dante",
+  "addres_customer ": "das",
+  "date ": "2025-01-01",
+  "divisa ": "eur"
+}
