@@ -38,6 +38,26 @@ app.get('/invoice',(request, response) => {
         })
 })
 
+app.get('/invoice/show_invoices', (request, response) => {
+    fs.readFile('./html/show_invoices.html', 'utf-8')
+        .then(html => {
+            response.send(html)
+        })
+        .catch(error => {
+            response.status(404).send(ERROR_MESSAGE + error)
+        })
+})
+
+app.get('/invoice/companys', (request, response) => {
+    fs.readFile('./html/companys.html', 'utf-8')
+        .then(html => {
+            response.send(html)
+        })
+        .catch(error => {
+            response.status(404).send(ERROR_MESSAGE + error)
+        })
+})
+
 app.post('/invoice',(request, response) => {
     console.log(request.body)
 })

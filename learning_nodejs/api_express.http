@@ -1,6 +1,7 @@
 ### REGISTER INVOICES
 GET http://localhost:36394/invoice
 
+
 ### CREATE NEW INVOICE
 POST http://localhost:36394/invoice
 Content-Type : application/json
