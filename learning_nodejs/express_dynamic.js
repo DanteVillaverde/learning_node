@@ -29,17 +29,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/invoice',(request, response) => {
-    fs.readFile('/learning_nodejs/html/invoice.html', 'utf-8')
+    fs.readFile('learning_nodejs/html/invoice.html', 'utf-8')
         .then(html => {
             response.send(html)
         })
         .catch(error => {
-            response.status(404).send(ERROR_MESSAGE)
+            response.status(404).send(ERROR_MESSAGE+ error)
         })
 })
 
 app.get('/invoice/show_invoices', (request, response) => {
-    fs.readFile('/learning_nodejs/html/show_invoices.html', 'utf-8')
+    fs.readFile('learning_nodejs/html/show_invoices.html', 'utf-8')
         .then(html => {
             response.send(html)
         })
@@ -49,7 +49,7 @@ app.get('/invoice/show_invoices', (request, response) => {
 })
 
 app.get('/invoice/companys', (request, response) => {
-    fs.readFile('/learning_nodejs/html/companys.html', 'utf-8')
+    fs.readFile('learning_nodejs/html/companys.html', 'utf-8')
         .then(html => {
             response.send(html)
         })
