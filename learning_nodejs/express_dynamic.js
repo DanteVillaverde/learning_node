@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/invoice',(request, response) => {
-    fs.readFile('./html/invoice.html', 'utf-8')
+    fs.readFile('/html/invoice.html', 'utf-8')
         .then(html => {
             response.send(html)
         })
@@ -39,7 +39,7 @@ app.get('/invoice',(request, response) => {
 })
 
 app.get('/invoice/show_invoices', (request, response) => {
-    fs.readFile('./html/show_invoices.html', 'utf-8')
+    fs.readFile('/html/show_invoices.html', 'utf-8')
         .then(html => {
             response.send(html)
         })
