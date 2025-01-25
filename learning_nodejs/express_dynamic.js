@@ -3,7 +3,7 @@ const fs = require('node:fs/promises')
 const invoices_json = require('./invoices.json')
 
 const app = express();
-const PORT = 36394;
+const PORT = process.env.PORT ?? 36394;
 const ERROR_MESSAGE = '<h1>ERROR AL LEER ARCHIVO html</h1>'
 
 //app.use((request, response, next) =>{

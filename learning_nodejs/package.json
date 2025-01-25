@@ -4,6 +4,7 @@
   "description": "learning nodeJS",
   "main": "app_calculadora.js",
   "scripts": {
+    "start" : "node express_dynamic.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
