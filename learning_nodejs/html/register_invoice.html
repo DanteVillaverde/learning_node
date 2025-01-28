@@ -159,8 +159,13 @@
             <h1>Registro de Facturas</h1>
             <form action="" method="POST">
                 <div class='field'>
-                    <label for="invoice-number">Factura:</label>
-                    <input type="text" id="invoice-number" name="invoice-number" required>
+                    <label for="invoice-number">Tipo de documento:</label>
+                    <select name="type_doc" id="type_doc">
+                        <option value="F">Factura</option>
+                        <option value="B">Boleta</option>
+                        <option value="NC">N/C</option>
+                        <option value="ND">N/D</option>
+                    </select>
                 </div>
 
                 <div class='field'>
@@ -177,20 +182,20 @@
                     <label for="customer">Cliente:</label>
                     <input type="text" id="customer" name="customer">
                 </div>
-                
+
                 <div class='field'>
-                    <label for="addres_customer">Dirección:</label>
-                    <input type="text" id="addres_customer" name="addres_customer">
+                    <label for="serie">Serie:</label>
+                    <input type="text" id="serie" name="serie" required>
                 </div>
 
+                <div class='field'>
+                    <label for="nro">Nro:</label>
+                    <input type="text" id="nro" name="nro" required>
+                </div>
+               
                 <div class='field'>
                     <label for="date">Fecha:</label>
                     <input type="date" id="date" name="date" required>
-                </div>
-
-                <div class='field'>
-                    <label for="divisa">Divisa:</label>
-                    <input type="text" id="divisa" name="divisa">
                 </div>
 
                 <button type="submit">Registrar</button>
@@ -219,7 +224,7 @@
                 </div>
                 <div class='field'>
                     <label for="unit-value">Valor Unitario:</label>
-                    <input type="number" id="unit-value" name="unit-value" required>
+                    <input type="number" required name="price" min="0" step="0.0000001">
                 </div>
                 <div class='field'>
                     <label for="total-value">Importe Total:</label>

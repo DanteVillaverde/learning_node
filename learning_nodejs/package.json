@@ -4,7 +4,7 @@
   "description": "learning nodeJS",
   "main": "app_calculadora.js",
   "scripts": {
-    "start" : "node learning_nodejs/express_dynamic.js",
+    "start": "node learning_nodejs/express_dynamic.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.21.2",
+    "mysql2": "^3.12.0",
     "picocolors": "^1.1.1"
   },
   "devDependencies": {

@@ -6,30 +6,11 @@ const app = express();
 const PORT = process.env.PORT ?? 36394;
 const ERROR_MESSAGE = '<h1>ERROR AL LEER ARCHIVO html</h1>'
 
-//app.use((request, response, next) =>{
-//    if (request.method == 'POST') {
-//        console.log("middleware =",request.params)
-//        let body = '';
-//
-//        request.on('data', chunk =>{
-//            body += chunk;
-//        })
-//
-//        request.on('end', () =>{
-//            request.body = body 
-//            next()
-//        })
-//    }else{
-//        return next();
-//    }
-//    
-//})
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/invoice',(request, response) => {
-    fs.readFile('learning_nodejs/html/invoice.html', 'utf-8')
+    fs.readFile('learning_nodejs/html/register_invoice.html', 'utf-8')
         .then(html => {
             response.send(html)
         })
