@@ -1,0 +1,21 @@
+{
+  "name": "learning_nodejs",
+  "version": "1.0.0",
+  "description": "learning nodeJS",
+  "main": "app_calculadora.js",
+  "scripts": {
+    "start": "node learning_nodejs/express_dynamic.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dante Villaverde",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.21.2",
+    "mysql2": "^3.12.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  }
+}

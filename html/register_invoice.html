@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Facturas</title>
+    <style>
+        body {
+            background-color: #bbb794;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .field {
+            margin-left: 10px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px; /* Ancho máximo del contenedor */
+            width: 100%;
+        }
+
+        .form-container, .invoice-lines {
+            background-color: #4384cf;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            margin-right: 20px; /* Separación entre formularios */
+        }
+
+        .form-container {
+            margin-right: 0; /* Eliminar el margen derecho en el primer contenedor */
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 0;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input {
+            background-color: #ffffff;
+            color: #2c2c2c;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            grid-column: span 2; /* Ocupa el ancho completo del formulario */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #bbbbbb;
+            grid-column: span 2;
+        }
+
+        nav {
+            width: 150px;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            background-color: #70797a;
+            color: rgb(10, 4, 4);
+            position: fixed; /* Fijo al lado izquierdo */
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column; /* Apila los elementos verticalmente */
+            padding-top: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 45px 0;
+            text-align: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 0;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #985496;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+            }
+            .container {
+                flex-direction: column; /* Apilar formularios en pantallas pequeñas */
+            }
+            .form-container, .invoice-lines {
+                margin-right: 0; /* Eliminar margen en pantallas pequeñas */
+                width: 100%; /* Asegura que ocupe todo el ancho */
+                margin-bottom: 20px; /* Separación vertical entre formularios */
+            }
+
+            form {
+                grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="http://learning-node-m9z4.onrender.com/invoice/show_invoices">Visualizar facturas</a></li>
+            <li><a href="http://learning-node-m9z4.onrender.com/invoice/companys">Empresas</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h1>Registro de Facturas</h1>
+            <form action="" method="POST">
+                <div class='field'>
+                    <label for="invoice-number">Tipo de documento:</label>
+                    <select name="type_doc" id="type_doc">
+                        <option value="F">Factura</option>
+                        <option value="B">Boleta</option>
+                        <option value="NC">N/C</option>
+                        <option value="ND">N/D</option>
+                    </select>
+                </div>
+
+                <div class='field'>
+                    <label for="ruc">Ruc:</label>
+                    <input type="text" id="ruc" name="ruc" required>
+                </div>
+
+                <div class='field'>
+                    <label for="company">Empresa:</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+
+                <div class='field'>
+                    <label for="customer">Cliente:</label>
+                    <input type="text" id="customer" name="customer">
+                </div>
+
+                <div class='field'>
+                    <label for="serie">Serie:</label>
+                    <input type="text" id="serie" name="serie" required>
+                </div>
+
+                <div class='field'>
+                    <label for="nro">Nro:</label>
+                    <input type="text" id="nro" name="nro" required>
+                </div>
+               
+                <div class='field'>
+                    <label for="date">Fecha:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <button type="submit">Registrar</button>
+                <p class="footer">Todos los campos son obligatorios salvo descripción.</p>
+            </form>
+        </div>
+
+        <div style = 'margin-left: 40px;'>
+        </div>
+        
+
+        <div class="invoice-lines">
+            <h2>Líneas de Factura</h2>
+            <form action="" method="POST">
+                <div class='field'>
+                    <label for="item">Artículo:</label>
+                    <input type="text" id="item" name="item" required>
+                </div>
+                <div class='field'>
+                    <label for="unit">Unidad:</label>
+                    <input type="text" id="unit" name="unit" required>
+                </div>
+                <div class='field'>
+                    <label for="quantity">Cantidad:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+                </div>
+                <div class='field'>
+                    <label for="unit-value">Valor Unitario:</label>
+                    <input type="number" required name="price" min="0" step="0.0000001">
+                </div>
+                <div class='field'>
+                    <label for="total-value">Importe Total:</label>
+                    <input type="number" id="total-value" name="total-value" required>
+                </div>
+                <button type="submit">Añadir Línea</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
